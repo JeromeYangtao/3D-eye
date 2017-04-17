@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+    <link rel="stylesheet" type="" href="style.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <script>
+        let x = 0
+        let y = 0
+        let parent = document.querySelectorAll('.parent')[0]
+
+        function step() {
+            parent.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`
+            x = Math.random() * 90 - 45
+            y = Math.random() * 90 - 45
+        }
+
+        setInterval(function() {
+            step()
+        }, 1000)
+    </script>
+</body>
+
+</html>
